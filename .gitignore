@@ -1,0 +1,10 @@
+.idea/
+npm-debug.log
+www/
+platforms/
+plugins/
+src/node_modules
+src/public/build/js/
+src/public/build/css/
+.idea
+.DS_Store
