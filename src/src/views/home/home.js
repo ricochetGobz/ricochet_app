@@ -32,7 +32,22 @@ export default class Home extends React.Component {
 			<div id="home">
 		  		<h1>Home</h1>
 		  		<Link to='/users'>Users</Link>
+					<Link to='/login'>Login</Link>
+					<Logo />
 		  	</div>
 		);
+	}
+}
+
+class Logo extends React.Component {
+	constructor(props){
+		super(props);
+	}
+	render(){
+		return(
+			<div className="Logo" >
+				<img src={'http://placehold.it/400x20&text=slide1'} alt="boohoo" className="Logo"/>
+			</div>
+		)
 	}
 }

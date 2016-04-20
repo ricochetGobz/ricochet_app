@@ -19,8 +19,8 @@ import Layout from "./layout/layout";
 
 import Home from './views/home/home';
 import Users from './views/users/users';
-
-
+import Login from './views/login/login';
+import Menu from './views/menu/menu';
 
 // -----------------------------
 // Core
@@ -32,6 +32,8 @@ export default class Root extends React.Component {
             <Router history={browserHistory}>
                 <Route path="/" component={Layout}>
                     <IndexRoute component={Home} />
+                    <Route path="login" component={Login} />
+                    <Route path="menu" component={Menu} />
                     <Route path="users" component={Users} />
                 </Route>
             </Router>
