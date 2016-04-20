@@ -46,7 +46,7 @@ class Logo extends React.Component {
 	render(){
 		return(
 			<div className="Logo" >
-				<img src={'http://placehold.it/400x20&text=slide1'} alt="boohoo" className="Logo"/>
+				<img src={'./assets/images/00_Splash.jpg'} alt="boohoo" className="Logo"/>
 			</div>
 		)
 	}

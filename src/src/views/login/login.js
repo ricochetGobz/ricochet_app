@@ -29,7 +29,7 @@ export default class Login extends React.Component {
 		return (
 			<div id="login">
 		  		<h1>Connexion</h1>
-        	<logForm />
+        	<LogForm />
 					<Link to='/menu'>Menu</Link>
 		  	</div>
 		);
@@ -46,13 +46,11 @@ class LogForm extends React.Component {
 	}
 	render(){
 		return(
-			<div className="LogForm">
-				<form method="post" >
+				<form method="post" className="LogForm">
 					<p><input type="text" name="login" value="" placeholder="Username or Email" /></p>
 					<p><input type="password" name="password" value="" placeholder="Password"/></p>
-					<p class="submit"><input type="submit" name="commit" value="Login" onChange={this.handleReq} /></p>
+					<p><input type="submit" name="commit" value="Login" onclick={this.props.handleReq} /></p>
 				</form>
-			</div>
 		)
 	}
 }

@@ -14,11 +14,13 @@ export default class Menu extends React.Component {
 
 	componentDidMount() {
 		// Component appear
+		
 		console.info("[Menu] - starting");
 	}
 
 	componentWillUnmount() {
 		// Before leaving
+
 		console.info("[Menu] - closing");
 	}
 
@@ -44,7 +46,7 @@ class Composition extends React.Component {
 	render(){
 		return(
 			<div className="Composition menuLink" >
-				<img src={'http://placehold.it/400x20&text=slide1'} alt="boohoo" className="Logo"/>
+				<img src={''} alt="boohoo" className="Logo"/>
         <p>{this.props.title}</p>
 			</div>
 		)
