@@ -14,7 +14,7 @@ export default class Menu extends React.Component {
 
 	componentDidMount() {
 		// Component appear
-		
+
 		console.info("[Menu] - starting");
 	}
 
@@ -30,76 +30,34 @@ export default class Menu extends React.Component {
           <div id="menutTitle">
             <h2>Menu</h2>
           </div>
-		  		<Composition title="Compositions" />
-          <Scan title="Scan" />
-          <Favoris title="Favoris" />
-          <Sono title="Sonothèque" />
-          <Profil  title="Profil"/>
+		  		<Item title="Compositions" url="composition" />
+          <Item title="Scan" url="scan"/>
+          <Item title="Favoris" url="favoris" />
+          <Item title="Sonothèque" url="sono"/>
+          <Item title="Profil" url ="profil"/>
 		  </div>
 		);
 	}
 }
-class Composition extends React.Component {
+
+class Item extends React.Component {
 	constructor(props){
 		super(props);
 	}
+
+	handleClick(event) {
+	// this.setState({liked: !this.state.liked});
+	 console.info(event)
+ 	}
 	render(){
+		var urlImg = " lol";
 		return(
-			<div className="Composition menuLink" >
-				<img src={''} alt="boohoo" className="Logo"/>
-        <p>{this.props.title}</p>
-			</div>
-		)
-	}
-}
-class Scan extends React.Component {
-	constructor(props){
-		super(props);
-	}
-	render(){
-		return(
-			<div className="Scan menuLink" >
-				<img src={'http://placehold.it/400x20&text=slide1'} alt="boohoo" className="Logo"/>
-        <p>{this.props.title}</p>
-			</div>
-		)
-	}
-}
-class Favoris extends React.Component {
-	constructor(props){
-		super(props);
-	}
-	render(){
-		return(
-			<div className="Favoris menuLink" >
-				<img src={'http://placehold.it/400x20&text=slide1'} alt="boohoo" className="Logo"/>
-        <p>{this.props.title}</p>
-			</div>
-		)
-	}
-}
-class Sono extends React.Component {
-	constructor(props){
-		super(props);
-	}
-	render(){
-		return(
-			<div className="Sono menuLink" >
-				<img src={'http://placehold.it/400x20&text=slide1'} alt="boohoo" className="Logo"/>
-        <p>{this.props.title}</p>
-			</div>
-		)
-	}
-}
-class Profil extends React.Component {
-	constructor(props){
-		super(props);
-	}
-	render(){
-		return(
-			<div className="Profil menuLink" >
-				<img src={'http://placehold.it/400x20&text=slide1'} alt="boohoo" className="Logo"/>
-        <p>{this.props.title}</p>
+			<div className="Item menuLink" onClick={this.handleClick}>
+				<Link to={this.props.url}>
+					{this.props.title}
+					{urlImg}
+					<img src={'./assets/images/menu/' + this.props.url + '.png'} alt="boohoo" className={"Logo " +  this.props.url}/>
+				</Link>
 			</div>
 		)
 	}

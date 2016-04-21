@@ -21,6 +21,11 @@ import Home from './views/home/home';
 import Users from './views/users/users';
 import Login from './views/login/login';
 import Menu from './views/menu/menu';
+import Composition from './views/composition/composition';
+import Sono from './views/sono/sono';
+import Scan from './views/scan/scan';
+import Profil from './views/profil/profil';
+import Favoris from './views/favoris/favoris';
 
 // -----------------------------
 // Core
@@ -34,6 +39,11 @@ export default class Root extends React.Component {
                     <IndexRoute component={Home} />
                     <Route path="login" component={Login} />
                     <Route path="menu" component={Menu} />
+                    <Route path="composition" component={Composition} />
+                    <Route path="sono" component={Sono} />
+                    <Route path="favoris" component={Favoris} />
+                    <Route path="scan" component={Scan} />
+                    <Route path="profil" component={Profil} />
                     <Route path="users" component={Users} />
                 </Route>
             </Router>

@@ -40,16 +40,16 @@ class LogForm extends React.Component {
 		super(props);
 		this.state = { sent :  false };
 	}
-	handleReq(){
+	handleReq(e){
 		console.log("alhoa");
-
 	}
 	render(){
+
 		return(
 				<form method="post" className="LogForm">
-					<p><input type="text" name="login" value="" placeholder="Username or Email" /></p>
-					<p><input type="password" name="password" value="" placeholder="Password"/></p>
-					<p><input type="submit" name="commit" value="Login" onclick={this.props.handleReq} /></p>
+					<p><input type="text" name="login"  placeholder="Username or Email" /></p>
+					<p><input type="password" name="password"  placeholder="Password"/></p>
+					<p><input type="button" name="commit" value="Login" onClick={this.props.handleReq} /></p>
 				</form>
 		)
 	}
