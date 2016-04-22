@@ -43,20 +43,26 @@ export default class Menu extends React.Component {
 class Item extends React.Component {
 	constructor(props){
 		super(props);
+		this.state = {
+			url : this.props.url,
+			imgUrl : this.props.url
+		};
+		 this.handleClick = this.handleClick.bind(this);
 	}
 
 	handleClick(event) {
 	// this.setState({liked: !this.state.liked});
-	 console.info(event)
+
+	 this.setState({imgUrl : this.props.url+'_bis' });
+	 console.info(this.state.imgUrl)
+	  console.info(event.target)
  	}
 	render(){
-		var urlImg = " lol";
 		return(
-			<div className="Item menuLink" onClick={this.handleClick}>
+			<div className="Item menuLink" onClick={this.handleClick} onMouseDown={this.handleClick}>
 				<Link to={this.props.url}>
 					{this.props.title}
-					{urlImg}
-					<img src={'./assets/images/menu/' + this.props.url + '.png'} alt="boohoo" className={"Logo " +  this.props.url}/>
+					<img src={'./assets/images/menu/' + this.state.imgUrl + '.png'} alt="boohoo" className={"Logo " +  this.props.url}/>
 				</Link>
 			</div>
 		)
