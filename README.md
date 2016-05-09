@@ -20,4 +20,4 @@ Si tu veux compile, tu fais un `npm run build`
 Ça compile tout dans src/public puis ça copie src/public dans www/ et ça lance la commande `cordova build` qui compile pour les platforms
 
 [10:12]
-Si t'as des questions hésite pas :wink:
+Si t'as des questions hésite pas :wink:ls
