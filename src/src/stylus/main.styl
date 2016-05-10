@@ -20,6 +20,107 @@ webfont('circularStdItalic' , 'CircularStd-Bold-Italic', true, 'bold', 'Italic')
 
 body
   font-family circularStd
+	position relative
+
+.example-enter
+	opacity 0.01
+  transition opacity .5s ease-in
+
+
+.example-enter.example-enter-active
+  opacity 1
+
+
+.example-leave
+  opacity 1
+  transition opacity .5s ease-in
+
+
+.example-leave.example-leave-active
+  opacity 0.01
+
+
+html body
+  height 100%
+
+/***** HOME *****/
+
+.intro
+  width 100%
+  display block
+  position absolute
+  top 50%
+  left 50%
+  transform translate(-50%,-50%)
+
+/***** LOGIN *****/
+.formContainer
+  position relative
+  width 80%
+  margin-top 40%
+  margin-left 10%
+  .Logo
+    width 80%
+    margin-left 10%
+.picto
+  width 6%
+.pictoimg:nth-child(2n)
+  float right
+form
+  margin-top 15%
+  display inline-block
+  width 100%
+input
+  text-align center
+  width 98%
+  font-size 1.2em
+  color #5c74c0
+  margin-left 2%
+.inputForm
+  width 100%
+  position relative
+  margin-top 10%
+  display inline-block
+  border-bottom solid 2px #5c74c0
+.inputP
+  width 80%
+  display inline-block
+
+.buttonLog
+  margin-top 30px
+  border solid 2px #1fc3cd
+  color #1fc3cd
+  border-radius 20px
+  width 60%
+  margin-left 20%
+  background white
+
+/***** MENU *****/
+
+.menu
+	width 90%
+.item
+	width 45%
+	margin-top 5%
+	margin-left 3.3%
+	display inline-block
 
 .Logo
   width 100%
+
+.menuContainer
+	width 100%
+	position relative
+	display inline-block
+
+.Menu
+	position relative
+	display inline-block
+	width 100%
+
+
+.menuHeaderImg
+	display inline-block
+	width 60%
+	margin-top 5%
+	margin-left 20%

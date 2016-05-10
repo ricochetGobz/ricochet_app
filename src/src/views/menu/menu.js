@@ -14,26 +14,33 @@ export default class Menu extends React.Component {
 
 	componentDidMount() {
 		// Component appear
-		var test = this.refs.test.getDOMNode();
-		var t = new TimelineMax();
-
-		t.to(test, .1, {x:"00"});
+		// var test = this.refs.test.getDOMNode();
+		// var t = new TimelineMax();
+		//
+		// t.to(test, .1, {x:"00"});
 		console.info("[Menu] - starting");
 	}
 
 	componentWillUnmount() {
 		// Before leaving
-		var test = this.refs.test.getDOMNode();
-		var t = new TimelineMax();
-
-		t.to(test, .2, {x:"0"});
-		console.info("[Menu] - closing");
+		// var test = this.refs.test.getDOMNode();
+		// var t = new TimelineMax();
+		//
+		// t.to(test, .2, {x:"0"});
+		// console.info("[Menu] - closing");
 	}
 
 	render() {
 		return (
+			<ReactCSSTransitionGroup
+				transitionName="example"
+				transitionAppear={true}
+				transitionAppearTimeout={500}
+				transitionEnterTimeout={500}
+				transitionLeaveTimeout={500}
+			>
 			<div className="menuContainer">
-				<img src={'./assets/images/00_Splash.jpg'} alt="boohoo" className="menuHeaderImg"/>
+				<img src={'./assets/images/00_splash.jpg'} alt="boohoo" className="menuHeaderImg"/>
 				<div ref="test" className="Menu" >
 						<div className="item menuLink" >
 								<img src={'./assets/images/menu/menu.png'} alt="boohoo" className="Logo"/>
@@ -43,17 +50,9 @@ export default class Menu extends React.Component {
 	          <Item title="Favoris" url="favoris" />
 	          <Item title="Sonothèque" url="sono"/>
 	          <Item title="Profil" url ="profil"/>
-						<ReactCSSTransitionGroup
-		          component="div"
-		          transitionName="example"
-		          transitionEnterTimeout={500}
-		          transitionLeaveTimeout={500}
-		        >
-
-
-		        </ReactCSSTransitionGroup>
 			  </div>
 			</div>
+			</ReactCSSTransitionGroup>
 		);
 	}
 }

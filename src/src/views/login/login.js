@@ -28,7 +28,6 @@ export default class Login extends React.Component {
 	render() {
 		return (
 			<div id="login">
-		  		<h1>Connexion</h1>
         	<LogForm />
 					<Link to='/menu'>Menu</Link>
 		  	</div>
@@ -46,11 +45,24 @@ class LogForm extends React.Component {
 	render(){
 
 		return(
-				<form method="post" className="LogForm">
-					<p><input type="text" name="login"  placeholder="Username or Email" /></p>
-					<p><input type="password" name="password"  placeholder="Password"/></p>
-					<p><input type="button" name="commit" value="Login" onClick={this.props.handleReq} /></p>
-				</form>
+				<div className="formContainer">
+				  <div>
+							<img src={'./assets/images/00_splash.jpg'} alt="boohoo" className="Logo"/>
+					</div>
+					<form method="post" className="LogForm">
+						<div className="inputForm">
+							<img src={'./assets/images/login/form1.png'} alt="boohoo" className="picto"/>
+							<p className="inputP" ><input type="text" name="login"  placeholder="Username or Email" /></p>
+							<img src={'./assets/images/login/check.png'} alt="boohoo" className="picto"/>
+						</div>
+						<div className="inputForm">
+							<img src={'./assets/images/login/form2.png'} alt="boohoo" className="picto"/>
+							<p className="inputP"><input type="password" name="password"  placeholder="Password"/></p>
+							<img src={'./assets/images/login/cross.png'} alt="boohoo" className="picto"/>
+						</div>
+						<p><input type="button" className="buttonLog" name="commit" value="OK" onClick={this.props.handleReq} /></p>
+					</form>
+				</div>
 		)
 	}
 }
