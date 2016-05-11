@@ -30,7 +30,7 @@ export default class Profil extends React.Component {
 			<div id="profil">
 		  		<h1>Profil</h1>
 					<Link to='/menu'>Menu</Link>
-		  	</div>
+		  </div>
 		);
 	}
 }

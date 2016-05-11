@@ -38,6 +38,7 @@ class LogForm extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = { sent :  false };
+		this.handleReq = this.handleReq.bind(this);
 	}
 	handleReq(e){
 		console.log("alhoa");
@@ -60,7 +61,7 @@ class LogForm extends React.Component {
 							<p className="inputP"><input type="password" name="password"  placeholder="Password"/></p>
 							<img src={'./assets/images/login/cross.png'} alt="boohoo" className="picto"/>
 						</div>
-						<p><input type="button" className="buttonLog" name="commit" value="OK" onClick={this.props.handleReq} /></p>
+						<input type="button" className="buttonLog" name="commit" value="OK" onClick={this.handleReq} />
 					</form>
 				</div>
 		)

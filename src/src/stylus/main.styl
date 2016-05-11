@@ -3,7 +3,10 @@
 
 @import 'reset'
 
-
+$turquoise = #1fc3cd
+$darkpurple = #5c74c0
+$lightblue = #7fbee8
+$lightpurple = #bc76b2
 
 // -----------------------------
 // Mixins
@@ -12,7 +15,7 @@
 
 
 webfont('circularStd' , 'CircularStd-Bold', true, 'bold', 'normal')
-webfont('circularStdItalic' , 'CircularStd-Bold-Italic', true, 'bold', 'Italic')
+webfont('circularStdItalic' , 'CircularStd-BookItalic', true, 'bold', 'Italic')
 // -----------------------------
 // Imports
 
@@ -81,15 +84,15 @@ input
   position relative
   margin-top 10%
   display inline-block
-  border-bottom solid 2px #5c74c0
+  border-bottom solid 2px $darkpurple
 .inputP
   width 80%
   display inline-block
 
 .buttonLog
   margin-top 30px
-  border solid 2px #1fc3cd
-  color #1fc3cd
+  border solid 2px $turquoise
+  color $turquoise
   border-radius 20px
   width 60%
   margin-left 20%
@@ -124,3 +127,80 @@ input
 	width 60%
 	margin-top 5%
 	margin-left 20%
+
+/**** COMPOSITIONS ****/
+.titleBack
+  width 100%
+  position fixed
+  background white
+  h2
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%,-50%)
+    font-size 1.2em
+    letter-spacing 5px
+    color #5c74c0
+.arrow
+  width 10%
+  margin 4%
+
+.search
+  font-family circularStdItalic
+  display inline-block
+  padding 4%
+  padding-top 28%
+  padding-bottom 6%
+  width 92%
+  background #EEE
+  color $lightpurple
+  p
+    display inline-block
+    font-size 0.8em
+  input
+    background #EEE
+    color $lightblue
+    border solid 2px $lightblue
+    border-radius 50px
+    width 80%
+    font-size 0.9em
+    margin-top 5%
+    float right
+
+.option
+  width 60%
+  float right
+  color $lightblue
+  p
+    display inline-block
+    float right
+    font-size 0.9em
+    width 30%
+    margin-left 15%
+    padding 2px
+    text-align center
+    border solid 2px $lightblue
+    border-radius 50px
+.itemComp
+  position relative
+  display block
+  img
+    width 100%
+.itemAtr
+  padding-left 5%
+  letter-spacing 2px
+  margin-top 10px
+  margin-bottom 10px
+  font-variant small-caps
+  background white
+  p:nth-child(1)
+    color $lightpurple
+    margin-bottom 5px
+  p:nth-child(2)
+    font-size 0.8em
+    color $darkpurple
+.fav
+  position absolute
+  left 5%
+  top 0
+  
