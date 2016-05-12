@@ -27,7 +27,7 @@ export default class Favoris extends React.Component {
 
 	render() {
 		return (
-			<div id="favoris">
+			<div id="favoris" className="favorisContainer">
 				<div className="titleBack">
 						<Link to='/menu'><img src={'./assets/images/back_arrow.png'} alt="boohoo" className="arrow"/></Link>
 						<h2 className="titleScreen">FAVORIS</h2>
@@ -37,17 +37,17 @@ export default class Favoris extends React.Component {
 					<div className="option">
 						<p> Date </p>
 						<p> Titre </p>
-						<input type="text" name="search"  value="Rechercher"/>
+						<input type="text" name="search"  placeholder="Rechercher"/>
 					</div>
 				</div>
-				<ItemComp author = "Michel" compTitle = "des barres de lol" urlValue="/sonotheque/01"/>
-				<ItemComp author = "Moules" compTitle = "j'aime les mouches" urlValue="/sonotheque/02"/>
-				<ItemComp author = "Frites" compTitle = "dehors, il pleut" urlValue="/sonotheque/03"/>
+				<ItemFav author = "Michel" compTitle = "des barres de lol" urlValue="/sonotheque/01"/>
+				<ItemFav author = "Moules" compTitle = "j'aime les mouches" urlValue="/sonotheque/02"/>
+				<ItemFav author = "Frites" compTitle = "dehors, il pleut" urlValue="/sonotheque/03"/>
 			</div>
 		);
 	}
 }
-class ItemComp extends React.Component {
+class ItemFav extends React.Component {
 	constructor(props){
 		super(props);
 	}

@@ -26,6 +26,7 @@ import Sono from './views/sono/sono';
 import Scan from './views/scan/scan';
 import Profil from './views/profil/profil';
 import Favoris from './views/favoris/favoris';
+import Player from './views/player/player';
 
 // -----------------------------
 // Core
@@ -44,6 +45,7 @@ export default class Root extends React.Component {
                     <Route path="favoris" component={Favoris} />
                     <Route path="scan" component={Scan} />
                     <Route path="profil" component={Profil} />
+                    <Route path="player" component={Player} />
                     <Route path="users" component={Users} />
                 </Route>
             </Router>

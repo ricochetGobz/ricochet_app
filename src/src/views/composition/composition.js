@@ -37,7 +37,7 @@ export default class Composition extends React.Component {
 					<div className="option">
 						<p> Date </p>
 						<p> Titre </p>
-						<input type="text" name="search"  value="Rechercher"/>
+						<input type="text" name="search"  placeholder="Rechercher"/>
 					</div>
 				</div>
 				<ItemComp author = "Michel" compTitle = "des barres de lol" urlValue="/sonotheque/01"/>
@@ -55,10 +55,12 @@ class ItemComp extends React.Component {
 	render(){
 		return(
 			<div className="itemComp">
-				<img src={'./assets/images'+ this.props.urlValue+'.png'} alt="boohoo" className="compImg"/>
+				<Link to="/player">
+				<img src={'./assets/images'+ this.props.urlValue +'.png'} alt="boohoo" className="compImg"/>
 				<div className="itemAtr">
 					<p>{this.props.compTitle}</p>
 				</div>
+				</Link>
 			</div>
 		)
 	}

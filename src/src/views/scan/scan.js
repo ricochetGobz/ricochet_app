@@ -18,6 +18,7 @@ export default class Scan extends React.Component {
 	componentDidMount() {
 		// Component appear
 		console.info("[Scan] - starting");
+		navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );
 	}
 
 	componentWillUnmount() {
