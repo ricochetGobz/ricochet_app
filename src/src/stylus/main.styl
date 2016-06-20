@@ -13,7 +13,7 @@ $lightpurple = #bc76b2
 
 @import 'mixins'
 
-
+webfont('circularStdNormal' , 'circularstd-book', true, 'normal', 'normal')
 webfont('circularStd' , 'CircularStd-Bold', true, 'bold', 'normal')
 webfont('circularStdItalic' , 'CircularStd-BookItalic', true, 'bold', 'Italic')
 // -----------------------------
@@ -21,10 +21,16 @@ webfont('circularStdItalic' , 'CircularStd-BookItalic', true, 'bold', 'Italic')
 
 @import '../layout/layout'
 
+w = (160px / 3)
+h = (190px / 3)
+
 body
   font-family circularStd
 	position relative
-
+a
+  text-decoration none
+video
+  background white
 .example-enter
 	opacity 0.01
   transition opacity .5s ease-in
@@ -62,9 +68,23 @@ html body
   width 80%
   margin-top 40%
   margin-left 10%
-  .Logo
-    width 80%
-    margin-left 10%
+.logLogo
+  animation opacityTranslation .2s ease-in forwards
+.Logo
+  width 80%
+  //margin-left 10%
+  opacity
+  animation opacityTranslation .5s ease-in forwards
+.buttonLog
+  opacity 0
+  animation opacityTranslation .5s ease-in forwards
+.inputForm
+  opacity 0
+  animation opacityTranslation .5s ease-in forwards
+.inputForm:nth-child(1)
+  animation-delay .1s
+.inputForm:nth-child(2)
+  animation-delay .2s
 .picto
   width 6%
 .pictoimg:nth-child(2n)
@@ -79,6 +99,7 @@ input
   font-size 1.2em
   color #5c74c0
   margin-left 2%
+  border none
 .inputForm
   width 100%
   position relative
@@ -88,6 +109,8 @@ input
 .inputP
   width 80%
   display inline-block
+  margin-left: 3%;
+  margin-right: 3%;
 
 .buttonLog
   margin-top 30px
@@ -97,7 +120,9 @@ input
   width 60%
   margin-left 20%
   background white
-
+input
+ font-family circularStdNormal
+ color #5c74c0
 /***** MENU *****/
 
 .menu
@@ -108,8 +133,27 @@ input
 	margin-left 3.3%
 	display inline-block
 
+.menuHeaderImg
+  opacity 0
+  animation opacityTranslation .2s ease-in forwards
 .Logo
   width 100%
+.item
+  opacity 0
+  animation opacityTranslation .2s ease-in forwards
+  //animation-fill-mode forwards
+.item:nth-child(1)
+  animation-delay .1s
+.item:nth-child(2)
+  animation-delay .2s
+.item:nth-child(3)
+  animation-delay .3s
+.item:nth-child(4)
+  animation-delay .4s
+.item:nth-child(5)
+  animation-delay .5s
+.item:nth-child(6)
+  animation-delay .6s
 
 .menuContainer
 	width 100%
@@ -166,7 +210,9 @@ input
     font-size 0.9em
     margin-top 5%
     float right
-
+.menuLink
+  background-image: url("./assets/images/menu/menu.png");
+  //animation: backgroundTranslation 5s infinite linear;
 .option
   width 60%
   float right
@@ -203,4 +249,19 @@ input
   position absolute
   left 5%
   top 0
-  
+.playerImg
+  width 100%
+.playerBot
+  margin-left 10%
+  margin-top 15%
+  width 80%
+@keyframes opacityTranslation {
+    from {
+      opacity 0
+      transform translate(0,30%)
+    }
+    to {
+      transform translate(0,0%)
+      opacity 1
+    }
+}

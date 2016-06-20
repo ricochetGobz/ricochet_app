@@ -40,9 +40,9 @@ export default class Favoris extends React.Component {
 						<input type="text" name="search"  placeholder="Rechercher"/>
 					</div>
 				</div>
-				<ItemFav author = "Michel" compTitle = "des barres de lol" urlValue="/sonotheque/01"/>
-				<ItemFav author = "Moules" compTitle = "j'aime les mouches" urlValue="/sonotheque/02"/>
-				<ItemFav author = "Frites" compTitle = "dehors, il pleut" urlValue="/sonotheque/03"/>
+				<ItemFav author = "Jérémie" compTitle = "La vie" urlValue="/sonotheque/fav01"/>
+				<ItemFav author = "Ingrid" compTitle = "Hello world" urlValue="/sonotheque/viewed"/>
+				<ItemFav author = "Alain" compTitle = "Deaf Metal" urlValue="/sonotheque/03"/>
 			</div>
 		);
 	}
@@ -54,7 +54,6 @@ class ItemFav extends React.Component {
 	render(){
 		return(
 			<div className="itemComp">
-				<img src="./assets/images/favoris/fav.png" alt="boohoo" className="fav"/>
 				<img src={'./assets/images'+ this.props.urlValue+'.png'} alt="boohoo" className="compImg"/>
 				<div className="itemAtr">
 					<p>{this.props.compTitle}</p>

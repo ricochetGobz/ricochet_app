@@ -74,14 +74,14 @@ class Item extends React.Component {
 
 	 this.setState({imgUrl : this.props.url+'_bis' });
 	 console.info(this.state.imgUrl)
-		console.info(event.target)
+		//console.info(event.target)
  	}
 	handleClickUp(event) {
 	// this.setState({liked: !this.state.liked});
 
 	 this.setState({imgUrl : this.props.url });
 	 console.info(this.state.imgUrl)
-		console.info(event.target)
+	//	console.info(event.target)
  	}
 	render(){
 		return(

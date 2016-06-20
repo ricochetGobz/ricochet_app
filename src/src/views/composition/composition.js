@@ -40,9 +40,9 @@ export default class Composition extends React.Component {
 						<input type="text" name="search"  placeholder="Rechercher"/>
 					</div>
 				</div>
-				<ItemComp author = "Michel" compTitle = "des barres de lol" urlValue="/sonotheque/01"/>
-				<ItemComp author = "Moules" compTitle = "j'aime les mouches" urlValue="/sonotheque/02"/>
-				<ItemComp author = "Frites" compTitle = "dehors, il pleut" urlValue="/sonotheque/03"/>
+				<ItemComp author = "Arkestar" compTitle = "Orchestra" urlValue="/sonotheque/01"/>
+				<ItemComp author = "Marcel" compTitle = "j'aime les mouches" urlValue="/sonotheque/02"/>
+				<ItemComp author = "Sandrine" compTitle = "dehors, il pleut" urlValue="/sonotheque/03"/>
 		  </div>
 		);
 	}
@@ -58,6 +58,7 @@ class ItemComp extends React.Component {
 				<Link to="/player">
 				<img src={'./assets/images'+ this.props.urlValue +'.png'} alt="boohoo" className="compImg"/>
 				<div className="itemAtr">
+					<p>{this.props.author}</p>
 					<p>{this.props.compTitle}</p>
 				</div>
 				</Link>
